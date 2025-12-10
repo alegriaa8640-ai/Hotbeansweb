@@ -1,0 +1,196 @@
+﻿<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Beans - Current Vacancies</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <style>
+        /* Specific styles for the Vacancies Page */
+
+        .vacancy-section {
+            padding: 20px;
+        }
+
+        .vacancy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .vacancy-card {
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border-top: 5px solid var(--primary-color); /* Primary color highlight */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .vacancy-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px var(--shadow-medium);
+            }
+
+        .vacancy-card__title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .vacancy-card__details {
+            font-size: 1.1em;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+
+        .vacancy-card__requirements {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            color: var(--text-medium);
+            margin-bottom: 25px;
+        }
+
+            .vacancy-card__requirements li {
+                margin-bottom: 5px;
+                font-size: 0.95em;
+            }
+
+        .vacancy-card .button {
+            width: 100%;
+        }
+
+        /* Call to action card for applying */
+        .apply-cta {
+            text-align: center;
+            padding: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+            .apply-cta h2 {
+                margin-top: 0;
+                font-size: 2em;
+                color: white;
+            }
+
+            .apply-cta .button {
+                margin-top: 20px;
+                background-color: white;
+                color: var(--primary-color);
+                font-size: 1.1em;
+                padding: 15px 30px;
+                border: none;
+            }
+
+                .apply-cta .button:hover {
+                    background-color: var(--bg-medium);
+                    color: #0056b3;
+                }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__column header__column--left">
+        </div>
+        <div class="header__column header__column--right">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time</p>
+            <p class="header__text">Hot Beans Web Solutions &copy; 2024</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="navigation__link">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
+        <a href="employees.html" class="navigation__link">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link navigation__link--active">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
+    </nav>
+
+    <main class="page-content">
+        <h2 class="welcome-section__title">Explore Our Current Opportunities</h2>
+
+        <div class="vacancy-section">
+            <p style="text-align: center; font-size: 1.1em; color: var(--text-medium);">
+                Join The Hot Beans, where innovation meets digital excellence. We are looking for talented individuals to fill the following roles.
+            </p>
+
+            <div class="vacancy-grid">
+
+                <section class="vacancy-card">
+                    <h3 class="vacancy-card__title">Senior Full Stack Developer</h3>
+                    <p class="vacancy-card__details">
+                        **Location:** Remote (UK/EU) | **Type:** Full-time | **Experience:** 5+ Years
+                    </p>
+                    <p>We require a seasoned developer proficient in both frontend (React/Vue) and backend (Node.js/Python) technologies to lead major client projects.</p>
+
+                    <h4>Key Requirements:</h4>
+                    <ul class="vacancy-card__requirements">
+                        <li>Expertise in cloud services (AWS/Azure).</li>
+                        <li>Strong database design skills (SQL/NoSQL).</li>
+                        <li>Proven track record in agile development environments.</li>
+                    </ul>
+                    <a href="WorkForUs.html" class="button button--primary">Apply Now</a>
+                </section>
+
+                <section class="vacancy-card">
+                    <h3 class="vacancy-card__title">Junior Frontend Developer</h3>
+                    <p class="vacancy-card__details">
+                        **Location:** London Office | **Type:** Full-time | **Experience:** 0-2 Years
+                    </p>
+                    <p>An entry-level role perfect for recent graduates or those completing a traineeship. You will work alongside our Senior Developer, Vik Akbar.</p>
+
+                    <h4>Key Requirements:</h4>
+                    <ul class="vacancy-card__requirements">
+                        <li>Proficiency in HTML5, CSS3, and JavaScript.</li>
+                        <li>Familiarity with Git and version control.</li>
+                        <li>Basic understanding of responsive design principles.</li>
+                    </ul>
+                    <a href="WorkForUs.html" class="button button--primary">Apply Now</a>
+                </section>
+
+                <section class="vacancy-card">
+                    <h3 class="vacancy-card__title">Digital Marketing Specialist</h3>
+                    <p class="vacancy-card__details">
+                        **Location:** Hybrid | **Type:** Full-time | **Experience:** 3+ Years
+                    </p>
+                    <p>We are seeking a marketing professional to manage our SEO, content strategy, and social media presence, driving traffic and lead generation.</p>
+
+                    <h4>Key Requirements:</h4>
+                    <ul class="vacancy-card__requirements">
+                        <li>Proven success in increasing organic traffic (SEO).</li>
+                        <li>Experience with Google Analytics and Ads.</li>
+                        <li>Excellent written communication skills.</li>
+                    </ul>
+                    <a href="WorkForUs.html" class="button button--primary">Apply Now</a>
+                </section>
+
+            </div>
+
+            <div class="apply-cta">
+                <h2>Interested in a career with The Hot Beans?</h2>
+                <p>Visit our application page for details on our hiring process and benefits.</p>
+                <a href="WorkForUs.html" class="button">Go to Application Page</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
+            <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
+            <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
+            <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
+        </div>
+        <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
+    </footer>
+</body>
+</html>

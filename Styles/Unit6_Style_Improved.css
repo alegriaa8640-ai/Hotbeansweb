@@ -1,0 +1,365 @@
+﻿/* --- 1. Root Variables & Base Styles --- */
+:root {
+    /* Color Palette */
+    --primary-color: #007bff; /* Bright Blue (Accent, Links, Buttons) */
+    --secondary-color: #6c757d; /* Dark Grey (Secondary Buttons) */
+    --text-dark: #212529; /* Heading Text */
+    --text-medium: #495057; /* Body Text */
+    --text-light: #adb5bd; /* Footer Text, subtle details */
+    /* Backgrounds & Borders */
+    --bg-light: #ffffff; /* White (Card Backgrounds) */
+    --bg-medium: #f0f2f5; /* Soft Grey (Page Background - professional look) */
+    --bg-dark: #343a40; /* Dark Charcoal (Header & Footer) */
+    --border-light: #dee2e6;
+    /* Effects */
+    --font-family-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-medium);
+    color: var(--text-dark);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+/* --- 2. Header Styles --- */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.header__column--left {
+    flex-grow: 0;
+    margin-right: 20px;
+}
+
+.header__logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-color); /* Highlight Company Name */
+}
+
+.header__tagline {
+    margin: 5px 0 0 0;
+    font-size: 1.2em;
+    color: #ced4da;
+    font-style: italic;
+}
+
+.header__text {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #adb5bd;
+}
+
+/* --- 3. Navigation Styles --- */
+.navigation {
+    background-color: var(--bg-dark);
+    overflow: hidden;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    border-top: 1px solid #444;
+}
+
+.navigation__link {
+    float: left;
+    display: block;
+    color: var(--bg-light);
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .navigation__link:hover {
+        background-color: var(--secondary-color);
+        color: white;
+    }
+
+.navigation__link--active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+/* --- 4. Main Content Layout (Grid) --- */
+.page-content {
+    padding: 30px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: single column for mobile */
+    gap: 30px;
+}
+
+/* Card Styling for sections/articles */
+.card {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+    .card:last-child {
+        margin-bottom: 0;
+    }
+
+/* Section Headings */
+.welcome-section__title,
+.services-section__title {
+    color: var(--text-dark);
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lists */
+.welcome-section__list {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: var(--text-medium);
+}
+
+    .welcome-section__list li {
+        margin-bottom: 8px;
+    }
+
+
+/* --- 5. Sidebar (Aside) Styles --- */
+.sidebar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quick-contact__title,
+.action-card__title {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-top: 0;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.quick-contact__info {
+    margin: 5px 0;
+    font-size: 1.05em;
+    color: var(--text-medium);
+}
+
+.action-card p {
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+    .button--primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+.button--secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+
+    .button--secondary:hover {
+        background-color: #545b62;
+        border-color: #545b62;
+        transform: translateY(-2px);
+    }
+
+/* --- 6. Company Profile Specific Styles --- */
+.profile-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+    .profile-section__content article {
+        background-color: var(--bg-light);
+        padding: 20px;
+        border-radius: 8px;
+        /* Visual marker for key sections */
+        border-left: 5px solid var(--primary-color);
+        box-shadow: 0 2px 10px var(--shadow-light);
+    }
+
+    .profile-section__content h3 {
+        color: var(--primary-color);
+        font-size: 1.6em;
+        margin-top: 0;
+        border-bottom: 1px dashed var(--border-light);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    .profile-section__content p {
+        color: var(--text-medium);
+        font-size: 1.05em;
+    }
+
+/* --- 7. Footer Styles --- */
+.footer {
+    background-color: var(--bg-dark);
+    color: #e9ecef;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px var(--shadow-medium);
+}
+
+.social-links {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links__item img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+    .social-links__item img:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+.footer__text {
+    margin: 0;
+    font-size: 0.9em;
+    color: #adb5bd;
+}
+
+
+/* --- 8. Responsive Design (Media Queries) --- */
+
+/* Tablet and larger screens (992px) */
+@media (min-width: 992px) {
+    .content-wrapper {
+        /* Enable 2-column layout */
+        grid-template-columns: 280px 1fr;
+    }
+}
+
+/* Mobile adjustments (768px and smaller) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header__column--left {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header__title {
+        font-size: 2em;
+    }
+
+    .navigation__link {
+        float: none;
+        width: 100%;
+        text-align: left;
+        padding: 12px 15px;
+    }
+
+    .page-content {
+        padding: 20px 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .welcome-section__title, .services-section__title {
+        font-size: 1.8em;
+    }
+}
+
+/* Small mobile devices (480px and smaller) */
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 1.8em;
+    }
+
+    .quick-contact__title, .action-card__title {
+        font-size: 1.3em;
+    }
+
+    .welcome-section__title, .services-section__title {
+        font-size: 1.6em;
+        /* Center-align block headings more subtly on small screens */
+        padding-bottom: 5px;
+    }
+}

@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Beans! - Useful Links</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <style>
+        /* Specific styles for the Useful Links page */
+        /* Reusing the profile section style for the link cards */
+        .links-section__content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+            .links-section__content article {
+                background-color: var(--bg-light);
+                padding: 20px;
+                border-radius: 8px;
+                /* Blue accent border to match primary color */
+                border-left: 5px solid var(--primary-color);
+                box-shadow: 0 2px 10px var(--shadow-light);
+            }
+
+            .links-section__content h3 {
+                color: var(--primary-color);
+                border-bottom: 1px dashed var(--border-light);
+                padding-bottom: 5px;
+                margin-bottom: 15px; /* Space below the subheading */
+            }
+
+        /* Styles for the links lists (if not already in Unit6_Style_Improved.css) */
+        .links-list {
+            list-style: disc; /* Use standard disc list markers */
+            padding-left: 20px;
+        }
+
+            .links-list li {
+                margin-bottom: 10px;
+            }
+
+                .links-list li a {
+                    color: var(--text-color-dark); /* Contrasting link color */
+                    text-decoration: none;
+                    transition: color 0.3s;
+                }
+
+                    .links-list li a:hover {
+                        color: var(--primary-color); /* Change color on hover */
+                        text-decoration: underline;
+                    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__column header__column--left">
+        </div>
+        <div class="header__column header__column--right">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
+            <p class="header__text">Hot Beans Web Solutions.</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="navigation__link">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
+        <a href="employees.html" class="navigation__link">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link navigation__link--active">Useful Links</a>
+    </nav>
+
+    <main class="page-content">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <section class="quick-contact card" id="contact">
+                    <h2 class="quick-contact__title">Direct Contact</h2>
+                    <p class="quick-contact__info"> Email: <a href="mailto:info@hotbeansnewweb.com">info@hotbeansnewweb.com</a></p>
+                    <p class="quick-contact__info"> Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p class="quick-contact__info">Address: Old Kent Road, London City.</p>
+                    <p class="quick-contact__info">
+                        <a href="WorkForUs.html" class="button button--secondary" style="margin-top: 15px;">Work For Us!</a>
+                    </p>
+                </section>
+
+                <section class="action-card card">
+                    <h2 class="action-card__title">Ready to Start?</h2>
+                    <p>Let's discuss how we can elevate your digital presence.</p>
+                    <a href="CurrentVacancies.html" class="button button--primary">View Vacancies</a>
+                </section>
+            </aside>
+
+            <div class="main-column">
+                <section class="links-section card">
+                    <h2 class="welcome-section__title"> Useful Resources for Web Development</h2>
+
+                    <p>Below you will find a curated list of essential links for aspiring and current web developers at The Hot Beans, covering documentation, learning, and essential tools.</p>
+
+                    <div class="links-section__content">
+
+                        <article>
+                            <h3>Official Documentation & Standards</h3>
+                            <ul class="links-list">
+                                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> - Comprehensive documentation for web technologies (HTML, CSS, JS).</li>
+                                <li><a href="https://www.w3.org/" target="_blank">W3C (World Wide Web Consortium)</a> - International standards for the World Wide Web.</li>
+                                <li><a href="https://caniuse.com/" target="_blank">Can I Use...</a> - Check browser support for front-end web technologies.</li>
+                            </ul>
+                        </article>
+
+                        <article>
+                            <h3>Learning & Training Platforms</h3>
+                            <p>Great resources for continuing education and skill practice.</p>
+                            <ul class="links-list">
+                                <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - Interactive lessons and projects to learn coding.</li>
+                                <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> - Full-stack curriculum focused on practical application.</li>
+                                <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - Free educational resources for various subjects, including computing.</li>
+                            </ul>
+                        </article>
+
+                        <article>
+                            <h3>Essential Coding Tools</h3>
+                            <ul class="links-list">
+                                <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a> - The most popular free source-code editor.</li>
+                                <li><a href="https://github.com/" target="_blank">GitHub</a> - Platform for version control and collaboration.</li>
+                                <li><a href="https://codepen.io/" target="_blank">CodePen</a> - Social development environment for front-end designers and developers.</li>
+                            </ul>
+                        </article>
+
+                        <article>
+                            <h3>Design and Asset Resources</h3>
+                            <ul class="links-list">
+                                <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - A large library of free, open-source fonts.</li>
+                                <li><a href="https://unsplash.com/" target="_blank">Unsplash</a> - High-quality, free stock images.</li>
+                                <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - Vector icons and social logos.</li>
+                            </ul>
+                        </article>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
+            <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
+            <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
+            <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
+        </div>
+        <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Beans - Meet Our Team</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <style>
+        /* Specific styles for the employee section that complement the main CSS */
+
+        /* * Note: Many of the classes like .employee-grid and .employee-card
+        * should be defined in Unit6_Style_Improved.css to inherit colors and shadows.
+        */
+
+        .employee-grid {
+            /* We adapt the grid layout from the main CSS */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .employee-card {
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            background-color: var(--bg-light);
+            box-shadow: 0 6px 15px var(--shadow-light);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .employee-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px var(--shadow-medium);
+            }
+
+        .employee-card__image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .employee-card__name {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+            font-size: 1.6em;
+        }
+
+        .employee-card__role {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text-medium);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .employee-card__description {
+            font-size: 1em;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__column header__column--left">
+        </div>
+        <div class="header__column header__column--right">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
+            <p class="header__text">Hot Beans Web Solutions.</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="navigation__link">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
+        <a href="Employees.html" class="navigation__link navigation__link--active">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
+    </nav>
+
+    <main class="page-content">
+        <h2 class="welcome-section__title">Meet Our Team of Web Specialists</h2>
+
+        <div class="employee-grid">
+
+            <section class="employee-card card" aria-labelledby="james-name">
+                <img src="james.jpg" alt="Professional portrait of James Smith, Chief Executive Officer" class="employee-card__image">
+                <h3 id="james-name" class="employee-card__name">James Smith</h3>
+                <p class="employee-card__role">Chief Executive Officer</p>
+                <p class="employee-card__description">James founded The Hot Beans Web in 2015 and now acts as CEO, leading the overall business strategy and managing daily operations.</p>
+            </section>
+
+            <section class="employee-card card" aria-labelledby="rachel-name">
+                <img src="images/rachel.jpeg" alt="Professional portrait of Rachel Allen, Development Director" class="employee-card__image">
+                <h3 id="rachel-name" class="employee-card__name">Rachel Allen</h3>
+                <p class="employee-card__role">Development Director</p>
+                <p class="employee-card__description">Rachel oversees all web development projects, ensuring timely delivery and strict compliance with high-quality and performance standards.</p>
+            </section>
+
+            <section class="employee-card card" aria-labelledby="vik-name">
+                <img src="images/vik.jpg" alt="Professional portrait of Vik Akbar, Senior Web Developer" class="employee-card__image">
+                <h3 id="vik-name" class="employee-card__name">Vik Akbar</h3>
+                <p class="employee-card__role">Senior Web Developer</p>
+                <p class="employee-card__description">As a founding member, Vik is a core full-stack developer, specializing in complex server-side logic and database architecture.</p>
+            </section>
+
+            <section class="employee-card card" aria-labelledby="thomas-name">
+                <img src="images/thomas.jpeg" alt="Professional portrait of Thomas Kane, Junior Web Developer" class="employee-card__image">
+                <h3 id="thomas-name" class="employee-card__name">Thomas Kane</h3>
+                <p class="employee-card__role">Junior Web Developer</p>
+                <p class="employee-card__description">Thomas is our newest team member, specializing in modern frontend frameworks, bringing fresh ideas and enthusiasm to our UI/UX designs.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
+            <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
+            <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
+            <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
+        </div>
+        <p class="footer__text">The Hot Beans. All rights reserved.</p>
+    </footer>
+</body>
+</html>

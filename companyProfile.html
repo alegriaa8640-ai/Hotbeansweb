@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Beans! - Company Profile</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <style>
+        /* Specific styles for the profile page layout */
+        .profile-section__content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+            .profile-section__content article {
+                background-color: var(--bg-light);
+                padding: 20px;
+                border-radius: 8px;
+                /* Blue accent border to match primary color */
+                border-left: 5px solid var(--primary-color);
+                box-shadow: 0 2px 10px var(--shadow-light);
+            }
+
+            .profile-section__content h3 {
+                color: var(--primary-color);
+                border-bottom: 1px dashed var(--border-light);
+                padding-bottom: 5px;
+            }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__column header__column--left">
+        </div>
+        <div class="header__column header__column--right">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
+            <p class="header__text">Hot Beans Web Solutions.</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="navigation__link">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link navigation__link--active">Company Profile</a>
+        <a href="employees.html" class="navigation__link">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
+    </nav>
+
+    <main class="page-content">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <section class="quick-contact card" id="contact">
+                    <h2 class="quick-contact__title">Direct Contact</h2>
+                    <p class="quick-contact__info"> Email: <a href="mailto:info@hotbeansnewweb.com">info@hotbeansnewweb.com</a></p>
+                    <p class="quick-contact__info"> Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p class="quick-contact__info">Address: 123 Digital Ave, Tech City.</p>
+                    <p class="quick-contact__info">
+                        <a href="#mission" class="button button--secondary" style="margin-top: 15px;">View Mission</a>
+                    </p>
+                </section>
+
+                <section class="action-card card">
+                    <h2 class="action-card__title">Ready to Start?</h2>
+                    <p>Let's discuss how we can elevate your digital presence.</p>
+                    <a href="CurrentVacancies.html" class="button button--primary">Contact Us Today</a>
+                </section>
+            </aside>
+
+            <div class="main-column">
+                <section class="profile-section card">
+                    <h2 class="welcome-section__title">Our History and Philosophy</h2>
+
+                    <div class="profile-section__content">
+
+                        <article id="mission">
+                            <h3>Mission </h3>
+                            <p>Our mission at The Hot Beans is simple: create exceptional web solutions that not only meet our clients' business objectives but exceed them. We are dedicated to transforming complex ideas into intuitive, fast, and accessible digital products.</p>
+                        </article>
+
+                        <article>
+                            <h3>Vision </h3>
+                            <p>To be globally recognized as the leading web development agency, distinguished by our technological innovation, the impeccable quality of our code, and our commitment to the long-term success of our business partners.</p>
+                        </article>
+
+                        <article>
+                            <h3>Our Core Values </h3>
+                            <ul class="welcome-section__list">
+                                <li>Innovation: We adopt the latest technologies (HTML5, CSS3, JavaScript Frameworks) to deliver cutting-edge solutions.</li>
+                                <li>Transparency: We maintain open and honest communication at every stage of the project.</li>
+                                <li>Quality: Our code is rigorously tested and optimized for performance and security.</li>
+                                <li>Collaboration: We work hand-in-hand with our clients, ensuring the final product accurately reflects their vision.</li>
+                            </ul>
+                        </article>
+
+                        <article>
+                            <h3>Our Journey </h3>
+                            <p>Founded in 2015 by James Smith, The Hot Beans began as a small, passionate team. Today, we have grown into a full-service agency, having successfully delivered over 300 projects! for clients across various sectors, from startups to large corporations.</p>
+                        </article>
+                                        </section>
+
+                                        <section class="card">
+                                            <h2 class="services-section__title">Our Commitment to Quality</h2>
+                                            <p>At The Hot Beans, quality is not an add-on; it is the foundation of everything we do. We ensure every project meets modern web standards, including:</p>
+                                            <ul class="welcome-section__list">
+                                                <li>Responsive Design: Flawless experience on any device.</li>
+                                                <li>Speed and Performance: Sites optimized for rapid loading times.</li>
+                                                <li>Accessibility: Compliance with standards so all users can interact with the content.</li>
+                                                <li>SEO Friendly: Code structure designed for search engine optimization.</li>
+                                            </ul>
+                                        </section>
+                                    </div>
+                                </div>
+                            </main>
+
+                            <footer class="footer">
+                                <div class="social-links">
+                                    <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
+                                    <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
+                                    <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
+                                    <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
+                                </div>
+                                <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
+                            </footer>
+                        </body>
+                    </html>
