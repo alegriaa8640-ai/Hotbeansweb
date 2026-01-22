@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,6 +6,14 @@
     <title>The Hot Beans! - Company Profile</title>
     <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
     <style>
+        /* --- NEW CSS FOR THE LOGO --- */
+        .header__logo {
+            /* Adjust max-height to ensure it doesn't break the header layout */
+            max-height: 80px;
+            width: auto; /* Maintains aspect ratio */
+            display: block; /* Helps with alignment */
+        }
+
         /* Specific styles for the profile page layout */
         .profile-section__content {
             display: flex;
@@ -32,6 +40,7 @@
 <body>
     <header class="header">
         <div class="header__column header__column--left">
+            <img src="images/logo.png" alt="The Hot Beans Logo" class="header__logo">
         </div>
         <div class="header__column header__column--right">
             <h1 class="header__title">The Hot Beans</h1>
@@ -99,30 +108,31 @@
                             <h3>Our Journey </h3>
                             <p>Founded in 2015 by James Smith, The Hot Beans began as a small, passionate team. Today, we have grown into a full-service agency, having successfully delivered over 300 projects! for clients across various sectors, from startups to large corporations.</p>
                         </article>
-                                        </section>
+                    </div>
+                </section>
 
-                                        <section class="card">
-                                            <h2 class="services-section__title">Our Commitment to Quality</h2>
-                                            <p>At The Hot Beans, quality is not an add-on; it is the foundation of everything we do. We ensure every project meets modern web standards, including:</p>
-                                            <ul class="welcome-section__list">
-                                                <li>Responsive Design: Flawless experience on any device.</li>
-                                                <li>Speed and Performance: Sites optimized for rapid loading times.</li>
-                                                <li>Accessibility: Compliance with standards so all users can interact with the content.</li>
-                                                <li>SEO Friendly: Code structure designed for search engine optimization.</li>
-                                            </ul>
-                                        </section>
-                                    </div>
-                                </div>
-                            </main>
+                <section class="card">
+                    <h2 class="services-section__title">Our Commitment to Quality</h2>
+                    <p>At The Hot Beans, quality is not an add-on; it is the foundation of everything we do. We ensure every project meets modern web standards, including:</p>
+                    <ul class="welcome-section__list">
+                        <li>Responsive Design: Flawless experience on any device.</li>
+                        <li>Speed and Performance: Sites optimized for rapid loading times.</li>
+                        <li>Accessibility: Compliance with standards so all users can interact with the content.</li>
+                        <li>SEO Friendly: Code structure designed for search engine optimization.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
 
-                            <footer class="footer">
-                                <div class="social-links">
-                                    <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
-                                    <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
-                                    <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
-                                    <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
-                                </div>
-                                <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
-                            </footer>
-                        </body>
-                    </html>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
+            <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
+            <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
+            <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
+        </div>
+        <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
+    </footer>
+</body>
+</html>
