@@ -6,12 +6,28 @@
     <title>The Hot Beans! - Company Profile</title>
     <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
     <style>
-        /* --- NEW CSS FOR THE LOGO --- */
-        .header__logo {
-            /* Adjust max-height to ensure it doesn't break the header layout */
-            max-height: 80px;
-            width: auto; /* Maintains aspect ratio */
-            display: block; /* Helps with alignment */
+        /* --- CSS FOR THE NEW TEXT LOGO "THB" --- */
+        .text-logo {
+            /* Ensures the box only takes up necessary space */
+            display: inline-block;
+            /* A thick, bold font stack for a strong logo look */
+            font-family: 'Arial Black', Impact, Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            /* White text on the primary blue background */
+            color: #ffffff;
+            /* Using the CSS variable defined in your main stylesheet if available, otherwise fallback to a blue */
+            background-color: var(--primary-color, #0056b3);
+            /* Spacing inside the box */
+            padding: 10px 15px;
+            /* Rounded corners */
+            border-radius: 8px;
+            /* A subtle shadow to make it pop slightly */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            /* Spacing between the letters */
+            letter-spacing: 2px;
+            /* Ensures vertical alignment with the right column */
+            vertical-align: middle;
         }
 
         /* Specific styles for the profile page layout */
@@ -40,7 +56,7 @@
 <body>
     <header class="header">
         <div class="header__column header__column--left">
-            <img src="images/logo.png" alt="The Hot Beans Logo" class="header__logo">
+            <div class="text-logo">THB</div>
         </div>
         <div class="header__column header__column--right">
             <h1 class="header__title">The Hot Beans</h1>
