@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+Aquí tienes el código completo para la página Work For Us!. He añadido el estilo CSS para el logo y el elemento <div class="text-logo">THB</div> en el encabezado, manteniendo todo lo demás exactamente igual.
+
+HTML
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,6 +10,21 @@
     <title>The Hot Beans! - Work For Us!</title>
     <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
     <style>
+        /* --- CSS FOR THE NEW TEXT LOGO "THB" --- */
+        .text-logo {
+            display: inline-block;
+            font-family: 'Arial Black', Impact, Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background-color: var(--primary-color, #0056b3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            letter-spacing: 2px;
+            vertical-align: middle;
+        }
+
         /* Specific styles for the Work For Us page */
         /* Reusing the profile section style for the content cards */
         .work-section__content {
@@ -45,6 +64,7 @@
 <body>
     <header class="header">
         <div class="header__column header__column--left">
+            <div class="text-logo">THB</div>
         </div>
         <div class="header__column header__column--right">
             <h1 class="header__title">The Hot Beans</h1>
