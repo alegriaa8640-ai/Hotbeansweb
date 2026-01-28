@@ -21,9 +21,8 @@
             vertical-align: middle;
         }
 
-        /* Specific styles for the employee section that complement the main CSS */
+        /* Specific styles for the employee section */
         .employee-grid {
-            /* We adapt the grid layout from the main CSS */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
@@ -33,7 +32,7 @@
         }
 
         .employee-card {
-            display: flex; /* Helps align the button at the bottom */
+            display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
@@ -42,7 +41,7 @@
             background-color: var(--bg-light);
             box-shadow: 0 6px 15px var(--shadow-light);
             transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%; /* Ensures cards are same height */
+            height: 100%;
         }
 
             .employee-card:hover {
@@ -50,14 +49,28 @@
                 box-shadow: 0 10px 25px var(--shadow-medium);
             }
 
-        .employee-card__image {
+        /* --- NEW STYLE FOR INITIALS AVATAR (Replaces Image) --- */
+        .initials-avatar {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
+            border-radius: 50%; /* Makes it a circle */
+            background-color: var(--primary-color, #0056b3); /* Blue background */
+            color: #ffffff; /* White text */
+            
+            /* Center the text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* Text styling */
+            font-family: 'Arial Black', Impact, Arial, sans-serif;
+            font-size: 3.5rem; /* Large text */
+            font-weight: bold;
+            letter-spacing: -2px;
+            
             margin-bottom: 15px;
-            border: 4px solid var(--primary-color, #0056b3);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border: 5px solid #e6e6e6; /* Light grey border */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .employee-card__name {
@@ -78,11 +91,11 @@
             font-size: 1em;
             color: var(--text-medium, #555);
             line-height: 1.5;
-            margin-bottom: 20px; /* Space before the button */
-            flex-grow: 1; /* Pushes the button to the bottom */
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
-        /* --- NEW BUTTON STYLE --- */
+        /* --- BUTTON STYLE --- */
         .contact-btn {
             display: inline-block;
             padding: 10px 25px;
@@ -90,7 +103,7 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 25px; /* Pill shape */
+            border-radius: 25px;
             transition: background-color 0.3s, transform 0.2s;
             border: 2px solid transparent;
         }
@@ -134,7 +147,7 @@
         <div class="employee-grid">
 
             <section class="employee-card card" aria-labelledby="james-name">
-                <img src="james.jpg" alt="Professional portrait of James Smith, Chief Executive Officer" class="employee-card__image">
+                <div class="initials-avatar">J.S</div>
                 <h3 id="james-name" class="employee-card__name">James Smith</h3>
                 <p class="employee-card__role">Chief Executive Officer</p>
                 <p class="employee-card__description">James founded The Hot Beans Web in 2015 and now acts as CEO, leading the overall business strategy and managing daily operations.</p>
@@ -142,7 +155,7 @@
             </section>
 
             <section class="employee-card card" aria-labelledby="rachel-name">
-                <img src="images/rachel.jpeg" alt="Professional portrait of Rachel Allen, Development Director" class="employee-card__image">
+                <div class="initials-avatar">R.A</div>
                 <h3 id="rachel-name" class="employee-card__name">Rachel Allen</h3>
                 <p class="employee-card__role">Development Director</p>
                 <p class="employee-card__description">Rachel oversees all web development projects, ensuring timely delivery and strict compliance with high-quality and performance standards.</p>
@@ -150,7 +163,7 @@
             </section>
 
             <section class="employee-card card" aria-labelledby="vik-name">
-                <img src="images/vik.jpg" alt="Professional portrait of Vik Akbar, Senior Web Developer" class="employee-card__image">
+                <div class="initials-avatar">V.A</div>
                 <h3 id="vik-name" class="employee-card__name">Vik Akbar</h3>
                 <p class="employee-card__role">Senior Web Developer</p>
                 <p class="employee-card__description">As a founding member, Vik is a core full-stack developer, specializing in complex server-side logic and database architecture.</p>
@@ -158,7 +171,7 @@
             </section>
 
             <section class="employee-card card" aria-labelledby="thomas-name">
-                <img src="images/thomas.jpeg" alt="Professional portrait of Thomas Kane, Junior Web Developer" class="employee-card__image">
+                <div class="initials-avatar">T.K</div>
                 <h3 id="thomas-name" class="employee-card__name">Thomas Kane</h3>
                 <p class="employee-card__role">Junior Web Developer</p>
                 <p class="employee-card__description">Thomas is our newest team member, specializing in modern frontend frameworks, bringing fresh ideas and enthusiasm to our UI/UX designs.</p>
