@@ -1,0 +1,412 @@
+﻿/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    /* Color Palette */
+    --primary-color: #2c3e50; /* Dark Blue - Professional */
+    --secondary-color: #e67e22; /* Hot Bean Orange - Accent */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --text-muted: #666666;
+    /* Backgrounds */
+    --bg-body: #f4f7f6;
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    /* Borders & Spacing */
+    --border-light: #dddddd;
+    --border-radius: 8px;
+    --spacing-std: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+/* =========================================
+   2. HEADER
+   ========================================= */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: var(--spacing-std);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.header__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.header__tagline {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #dcdcdc;
+}
+
+.header__text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* =========================================
+   3. NAVIGATION
+   ========================================= */
+.navigation {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 5px var(--shadow-light);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation__link {
+    display: block;
+    padding: 15px 25px;
+    color: var(--text-dark);
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+    .navigation__link:hover {
+        background-color: #f0f0f0;
+        color: var(--secondary-color);
+    }
+
+.navigation__link--active {
+    border-bottom: 3px solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* =========================================
+   4. LAYOUT & GRID
+   ========================================= */
+.page-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+/* Sidebar (Left) */
+.sidebar-left {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Main Content (Right) */
+.main-column {
+    flex: 2.5;
+}
+
+/* =========================================
+   5. GENERAL CARDS & SECTIONS
+   ========================================= */
+.card {
+    background-color: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-light);
+    margin-bottom: 20px;
+}
+
+h2, .welcome-section__title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+/* Sidebar specific */
+.quick-contact__info {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.action-card {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.action-card__title {
+    color: var(--text-light);
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.action-card p {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   6. SHARED CONTENT STYLES (Work & Links)
+   ========================================= */
+.work-section__content,
+.links-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+    .work-section__content article,
+    .links-section__content article {
+        background-color: var(--bg-light);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        border-left: 5px solid var(--primary-color);
+        box-shadow: 0 2px 5px var(--shadow-light);
+        transition: transform 0.2s ease;
+    }
+
+        .work-section__content article:hover,
+        .links-section__content article:hover {
+            transform: translateY(-3px);
+        }
+
+    .work-section__content h3,
+    .links-section__content h3 {
+        color: var(--primary-color);
+        border-bottom: 1px dashed var(--border-light);
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+
+/* =========================================
+   7. LISTS & FORMS
+   ========================================= */
+.benefits-list, ol, .links-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+    .benefits-list li, ol li, .links-list li {
+        margin-bottom: 10px;
+        color: var(--text-dark);
+    }
+
+.links-list {
+    list-style: disc;
+}
+
+    .links-list li a {
+        color: var(--text-dark);
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px dotted var(--primary-color);
+    }
+
+        .links-list li a:hover {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+form[name="VacancyApplicationForm"] {
+    background: #fff3e0;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    border: 1px solid #ffe0b2;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* =========================================
+   8. EMPLOYEE GRID & CARDS
+   ========================================= */
+.employee-grid {
+    display: grid;
+    /* This creates a responsive grid that wraps automatically */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.employee-card {
+    text-align: center;
+    background-color: var(--bg-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensure card contents align nicely */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+    .employee-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px var(--shadow-medium);
+    }
+
+.employee-card__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.employee-card__name {
+    margin: 5px 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.employee-card__role {
+    font-weight: 600;
+    color: var(--secondary-color); /* Orange accent for role */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.employee-card__description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* =========================================
+   9. BUTTONS
+   ========================================= */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button--primary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    width: 100%;
+}
+
+    .button--primary:hover {
+        background-color: #d35400;
+        color: var(--text-light);
+    }
+
+.button--secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+    .button--secondary:hover {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+    }
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links__item img {
+    transition: transform 0.2s;
+}
+
+    .social-links__item img:hover {
+        transform: scale(1.1);
+    }
+
+.footer__text {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* =========================================
+   11. RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar-left, .main-column {
+        width: 100%;
+        flex: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation__link {
+        text-align: center;
+        border-bottom: 1px solid var(--border-light);
+    }
+}
+{
+}
