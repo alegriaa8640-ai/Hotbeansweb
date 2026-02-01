@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hot Beans! - Application</title>
+    <title>The Hot Beans - Work For Us!</title>
     <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
     <style>
         /* --- CSS FOR THE LOGO --- */
@@ -21,7 +21,7 @@
             vertical-align: middle;
         }
 
-        /* --- GENERAL PAGE LAYOUT STYLES --- */
+        /* --- LAYOUT STYLES --- */
         .work-section__content {
             display: flex;
             flex-direction: column;
@@ -29,18 +29,11 @@
         }
 
         .work-section__content article {
-            background-color: var(--bg-light);
+            background-color: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
             border-left: 5px solid var(--primary-color, #0056b3);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .work-section__content h3 {
-            color: var(--primary-color, #0056b3);
-            border-bottom: 1px dashed #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
         }
 
         .job-details {
@@ -62,42 +55,7 @@
             color: #28a745;
         }
 
-        /* --- BUTTON STYLES --- */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            text-align: center;
-            cursor: pointer; /* Added for the form button */
-            border: none;
-            font-size: 1rem;
-        }
-
-        .button--primary {
-            background-color: #0056b3;
-            color: white;
-        }
-
-        .button--primary:hover {
-            background-color: #004494;
-        }
-
-        .button--secondary {
-            background-color: #6c757d;
-            color: white;
-        }
-        
-        .job-card-footer {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-            text-align: right;
-        }
-
-        /* --- NEW: APPLICATION FORM STYLES (MATCHING YOUR IMAGE) --- */
+        /* --- FORM STYLES --- */
         .application-form-section {
             background-color: #fff;
             padding: 25px;
@@ -105,20 +63,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-top: 30px;
             border-top: 5px solid #0056b3;
-        }
-
-        .form-intro {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .required-note {
-            color: red;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            display: block;
         }
 
         .form-group {
@@ -136,32 +80,29 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 1rem;
-            max-width: 400px; /* Keep inputs from getting too wide */
+            max-width: 400px;
         }
 
-        .radio-group label {
+        .button {
             display: inline-block;
-            margin-right: 15px;
-            font-weight: normal;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
         }
 
-        /* Success Message Styles (Hidden by default) */
+        .button--primary { background-color: #0056b3; color: white; }
+        .button--secondary { background-color: #6c757d; color: white; }
+
         #success-message {
             display: none;
             text-align: center;
             padding: 40px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
             border: 1px solid #28a745;
+            background-color: #f8f9fa;
         }
-
-        #success-message h3 {
-            color: #28a745; /* Green text for success */
-            font-size: 1.5rem;
-            border: none;
-        }
-
     </style>
 </head>
 <body>
@@ -171,8 +112,7 @@
         </div>
         <div class="header__column header__column--right">
             <h1 class="header__title">The Hot Beans</h1>
-            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
-            <p class="header__text">Hot Beans Web Solutions.</p>
+            <p class="header__tagline">Work For Us - Join Our Team!</p>
         </div>
     </header>
 
@@ -180,7 +120,7 @@
         <a href="index.html" class="navigation__link">Home</a>
         <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
         <a href="employees.html" class="navigation__link">Employees</a>
-        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
+        <a href="JobSpecifications.html" class="navigation__link">Job Specifications</a>
         <a href="WorkForUs.html" class="navigation__link navigation__link--active">Work For Us!</a>
         <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
     </nav>
@@ -188,55 +128,45 @@
     <main class="page-content">
         <div class="content-wrapper">
             <aside class="sidebar-left">
-                <section class="quick-contact card" id="contact">
+                <section class="quick-contact card">
                     <h2 class="quick-contact__title">Direct Contact</h2>
-                    <p class="quick-contact__info"> Email: <a href="mailto:careers@hotbeansnewweb.com">careers@hotbeansnewweb.com</a></p>
-                    <p class="quick-contact__info"> Phone: <a href="tel:+44553934567">(555) 123-4567</a></p>
-                    <p class="quick-contact__info">Address: Malt Street, Old Kent Road.</p>
+                    <p>Email: <a href="mailto:careers@hotbeansnewweb.com">careers@hotbeansnewweb.com</a></p>
+                    <p>Phone: (555) 123-4567</p>
                 </section>
             </aside>
 
             <div class="main-column">
-                
                 <section class="work-section card">
-                    <h2 class="welcome-section__title">Open Positions</h2>
-                    <p>Select a role below to see details, or scroll down to use our Online Application Form.</p>
+                    <h2 class="welcome-section__title">Start Your Career With Us</h2>
+                    <p>Review our open positions and fill out the form below to apply.</p>
 
                     <div class="work-section__content">
                         <article>
                             <h3>IT Project Manager</h3>
-                            <p><strong>Location:</strong> London / Old Kent Road</p>
                             <ul class="job-details">
                                 <li>Lead agile development teams.</li>
                                 <li>Manage project timelines and budgets.</li>
                             </ul>
-                            <div class="job-card-footer">
-                                <a href="#apply-online" class="button button--secondary">Apply Below</a>
-                            </div>
+                            <a href="#apply-online" class="button button--secondary">Apply Now</a>
                         </article>
 
                         <article>
                             <h3>Senior Web Developer</h3>
-                            <p><strong>Location:</strong> London/ Old Kent Road</p>
                             <ul class="job-details">
                                 <li>5+ years with React and Node.js.</li>
                                 <li>Database management mastery.</li>
                             </ul>
-                            <div class="job-card-footer">
-                                <a href="#apply-online" class="button button--secondary">Apply Below</a>
-                            </div>
+                            <a href="#apply-online" class="button button--secondary">Apply Now</a>
                         </article>
                     </div>
                 </section>
 
                 <section id="apply-online" class="application-form-section">
-                    
                     <div id="form-container">
-                        <span class="form-intro">Please complete the following online application form</span>
-                        <span class="required-note">All fields marked with a * are required</span>
+                        <span style="font-weight:bold; font-size:1.2rem; display:block; margin-bottom:10px;">Online Application Form</span>
+                        <p style="color:red; font-size:0.9rem;">* Required fields</p>
 
                         <form id="job-application-form">
-                            
                             <div class="form-group">
                                 <label for="firstname">* First Name:</label>
                                 <input type="text" id="firstname" name="firstname" class="form-control" required>
@@ -247,54 +177,40 @@
                                 <input type="text" id="lastname" name="lastname" class="form-control" required>
                             </div>
 
-                            <div class="form-group radio-group">
+                            <div class="form-group">
                                 <label>* Are you a UK resident?</label>
-                                <input type="radio" id="res-yes" name="resident" value="yes" required>
-                                <label for="res-yes">Yes</label>
-                                
-                                <input type="radio" id="res-no" name="resident" value="no">
-                                <label for="res-no">No</label>
+                                <input type="radio" id="res-yes" name="resident" value="yes" required> <label for="res-yes" style="display:inline; font-weight:normal;">Yes</label>
+                                <input type="radio" id="res-no" name="resident" value="no"> <label for="res-no" style="display:inline; font-weight:normal;">No</label>
                             </div>
 
                             <div class="form-group">
-                                <label for="phone">* Please enter your telephone contact details:</label>
+                                <label for="phone">* Telephone Details:</label>
                                 <input type="tel" id="phone" name="phone" class="form-control" required>
                             </div>
 
-                            <div style="margin-top: 20px;">
-                                <button type="submit" class="button button--primary">Apply Now</button>
-                            </div>
+                            <button type="submit" class="button button--primary">Submit Application</button>
                         </form>
                     </div>
 
                     <div id="success-message">
-                        <h3>Thank you so much for submitting your application form</h3>
-                        <p>We will be in touch shortly.</p>
-                        <button onclick="location.reload()" class="button button--secondary" style="margin-top:15px;">Submit Another</button>
+                        <h3 style="color:#28a745;">Application Submitted Successfully!</h3>
+                        <p>Thank you for your interest in The Hot Beans. Our HR team will contact you soon.</p>
+                        <button onclick="location.reload()" class="button button--secondary">Back to form</button>
                     </div>
-
                 </section>
-
             </div>
         </div>
     </main>
 
     <footer class="footer">
-        <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
+        <p class="footer__text">&copy; 2026 The Hot Beans. All rights reserved.</p>
     </footer>
 
     <script>
         document.getElementById('job-application-form').addEventListener('submit', function(event) {
-            // Prevent the actual page refresh (since we don't have a real server)
             event.preventDefault();
-
-            // Hide the form container
             document.getElementById('form-container').style.display = 'none';
-
-            // Show the success message
             document.getElementById('success-message').style.display = 'block';
-
-            // Optional: Scroll to the success message
             document.getElementById('apply-online').scrollIntoView({behavior: 'smooth'});
         });
     </script>
