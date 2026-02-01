@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Beans - Current Vacancies</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <style>
+        /* --- CSS PARA EL LOGOTIPO "THB" --- */
+        .text-logo {
+            display: inline-block;
+            font-family: 'Arial Black', Impact, Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background-color: var(--primary-color, #0056b3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            letter-spacing: 2px;
+            vertical-align: middle;
+        }
+
+        /* Estilos específicos para las tarjetas de vacantes */
+        .vacancies-section__content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .vacancy-card {
+            background-color: var(--bg-light, #f9f9f9);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color, #0056b3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .vacancy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .vacancy-card h3 {
+            color: var(--primary-color, #0056b3);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.6em;
+        }
+
+        .vacancy-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 5px;
+        }
+
+        .vacancy-details ul {
+            list-style: disc;
+            margin: 10px 0 20px 0;
+            padding-left: 20px;
+        }
+
+        .vacancy-details li {
+            margin-bottom: 5px;
+        }
+
+        /* Clase para el botón principal si no está en el CSS externo */
+        .button--primary {
+            display: inline-block;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__column header__column--left">
+            <div class="text-logo">THB</div>
+        </div>
+        <div class="header__column header__column--right">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
+            <p class="header__text">Hot Beans Web Solutions.</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="navigation__link">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
+        <a href="employees.html" class="navigation__link">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link navigation__link--active">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
+    </nav>
+
+    <main class="page-content">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <section class="quick-contact card" id="contact">
+                    <h2 class="quick-contact__title">Recruitment Contact</h2>
+                    <p class="quick-contact__info"> Email: <a href="mailto:careers@hotbeansnewweb.com">careers@hotbeansnewweb.com</a></p>
+                    <p class="quick-contact__info"> Phone: <a href="tel:+44553934567">(555) 123-4567</a></p>
+                    <p class="quick-contact__info">
+                        <a href="WorkForUs.html" class="button button--secondary" style="margin-top: 15px; display: inline-block;">Why Join Us?</a>
+                    </p>
+                </section>
+
+                <section class="action-card card" style="margin-top: 20px; padding: 15px; background: #eee; border-radius: 8px;">
+                    <h2 class="action-card__title">Application Tip</h2>
+                    <p>Ensure your CV highlights projects that demonstrate real-world problem-solving skills.</p>
+                    <a href="mailto:careers@hotbeansnewweb.com" class="button--primary">Apply via Email</a>
+                </section>
+            </aside>
+
+            <div class="main-column">
+                <section class="vacancies-section card">
+                    <h2 class="welcome-section__title"> Current Opportunities at The Hot Beans</h2>
+                    <p>Ready to jumpstart your career in web development? We are looking for talented, passionate individuals to fill the following roles.</p>
+
+                    <div class="vacancies-section__content">
+                        <div class="vacancy-card">
+                            <h3>Senior Front-End Developer</h3>
+                            <span class="vacancy-meta">Location: Hybrid (London / Remote) | Salary: Competitive | Posting Date: Dec 2025</span>
+                            <div class="vacancy-details">
+                                <p>We need an experienced developer to lead the creation of highly responsive and accessible user interfaces using React and modern CSS.</p>
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Develop new user-facing features using React.js workflows.</li>
+                                    <li>Optimize applications for maximum speed and scalability.</li>
+                                    <li>Collaborate with back-end developers and designers.</li>
+                                </ul>
+                                <a href="mailto:careers@hotbeansnewweb.com?subject=Application for Senior Front-End Developer" class="button--primary">Apply Now</a>
+                            </div>
+                        </div>
+
+                        <div class="vacancy-card">
+                            <h3>Junior Back-End Developer</h3>
+                            <span class="vacancy-meta">Location: Tech City Office | Salary: Starting | Posting Date: Dec 2025</span>
+                            <div class="vacancy-details">
+                                <p>An entry-level role perfect for recent graduates skilled in Node.js and database management (SQL/NoSQL).</p>
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Assist in developing and maintaining server-side logic.</li>
+                                    <li>Write efficient, testable, and reusable code.</li>
+                                    <li>Manage and optimize database interactions.</li>
+                                </ul>
+                                <a href="mailto:careers@hotbeansnewweb.com?subject=Application for Junior Back-End Developer" class="button--primary">Apply Now</a>
+                            </div>
+                        </div>
+
+                        <div class="vacancy-card">
+                            <h3>UX/UI Designer (Contract)</h3>
+                            <span class="vacancy-meta">Location: Remote Only | Salary: Hourly Rate | Posting Date: Nov 2025</span>
+                            <div class="vacancy-details">
+                                <p>Seeking a talented contract designer to create intuitive and aesthetically pleasing user experiences.</p>
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Create wireframes, storyboards, and user flow diagrams.</li>
+                                    <li>Design high-fidelity mockups using Figma or Sketch.</li>
+                                    <li>Conduct user research and A/B testing.</li>
+                                </ul>
+                                <a href="mailto:careers@hotbeansnewweb.com?subject=Application for UX/UI Designer" class="button--primary">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook"></a>
+            <a href="#" aria-label="Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter"></a>
+            <a href="#" aria-label="Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram"></a>
+            <a href="#" aria-label="LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn"></a>
+        </div>
+        <p class="footer__text">&copy; 2026 The Hot Beans. All rights reserved.</p>
+    </footer>
+</body>
+</html>
