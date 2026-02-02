@@ -6,7 +6,50 @@
     <title>The Hot Beans - Home</title>
     <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
     <style>
-        /* --- CSS FOR THE NEW TEXT LOGO "THB" --- */
+        /* --- ESTILOS PARA EL VIDEO DE FONDO --- */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Lo coloca detrás de todo */
+            overflow: hidden;
+            background-color: #000; /* Fondo negro mientras carga */
+        }
+
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* Evita que el usuario interactúe con el video */
+        }
+
+        /* Ajuste para que el video cubra toda la pantalla sin deformarse */
+        @media (min-aspect-ratio: 16/9) {
+            .video-background iframe { height: 56.25vw; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-background iframe { width: 177.78vh; }
+        }
+
+        /* --- ESTILOS PARA MEJORAR LA VISIBILIDAD SOBRE EL VIDEO --- */
+        body {
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Sombra para que el texto se lea mejor */
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.6) !important; /* Fondos semitransparentes para las tarjetas */
+            backdrop-filter: blur(5px); /* Efecto de desenfoque opcional */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- CSS EXISTENTE --- */
         .text-logo {
             display: inline-block;
             font-family: 'Arial Black', Impact, Arial, sans-serif;
@@ -23,6 +66,15 @@
     </style>
 </head>
 <body>
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/iWCenGIIBVE?autoplay=1&mute=1&controls=0&loop=1&playlist=iWCenGIIBVE&showinfo=0&rel=0&modestbranding=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
     <header class="header">
         <div class="header__column header__column--left">
             <div class="text-logo">THB</div>
@@ -69,10 +121,6 @@
                     <p class="welcome-section__text">
                         Thank you for visiting the official website of The New Hot Beans. We are a forward-thinking agency specializing in bespoke web development, innovative design, and robust digital solutions for global enterprises. Our passion is to transform ideas into powerful online experiences.
                     </p>
-                    <p class="welcome-section__text">
-                        Please browse around the site to find what you are looking for. Use the navigation bar above to explore:
-                    </p>
-
                     <ul class="welcome-section__list">
                         <li><strong>Company Profile</strong>: Discover our mission, vision, and core values that drive our success.</li>
                         <li><strong>Employees</strong>: Meet the dedicated team of experts who bring your digital dreams to life.</li>
@@ -80,9 +128,6 @@
                         <li><strong>Work For Us!</strong>: Learn more about our company culture, benefits, and how we invest in our talent.</li>
                         <li><strong>Useful Links</strong>: Access external resources and tools for web professionals and clients.</li>
                     </ul>
-                    <p class="welcome-section__text">
-                        We are dedicated to shaping the future of digital presence, providing cutting-edge solutions that empower businesses to thrive in the online world.
-                    </p>
                 </article>
 
                 <section class="services-section card">
@@ -94,15 +139,7 @@
                         </div>
                         <div class="service-item">
                             <h3 class="service-item__title">Responsive Design:</h3>
-                            <p class="service-item__description">Beautiful and functional designs that look great on any device, from desktop to mobile.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3 class="service-item__title">E-commerce Solutions:</h3>
-                            <p class="service-item__description">Secure and scalable online stores that drive sales and enhance customer experience.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3 class="service-item__title">Digital Marketing Integration:</h3>
-                            <p class="service-item__description">Seamless integration with SEO, social media, and analytics for maximum online visibility.</p>
+                            <p class="service-item__description">Beautiful and functional designs that look great on any device.</p>
                         </div>
                     </div>
                 </section>
@@ -111,22 +148,9 @@
     </main>
 
     <footer class="footer">
-        <div class="social-links">
-            <a href="#" aria-label="Find us on Facebook" class="social-links__item">
-                <img width="40" height="40" src="images/fblogo.png" alt="Facebook logo">
-            </a>
-            <a href="#" aria-label="Follow us on Twitter" class="social-links__item">
-                <img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo">
-            </a>
-            <a href="#" aria-label="Follow us on Instagram" class="social-links__item">
-                <img width="40" height="40" src="images/instalogo.png" alt="Instagram logo">
-            </a>
-            <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item">
-                <img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo">
-            </a>
-        </div>
         <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
 
