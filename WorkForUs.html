@@ -4,177 +4,157 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hot Beans - Work For Us!</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
     <style>
-        /* --- SOLID BLACK BACKGROUND --- */
-        body {
-            margin: 0;
-            background-color: #000000;
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif; /* Generic font */
-        }
-
-        /* --- HEADER: LOGO MOVED TO RIGHT --- */
-        .header {
-            display: flex;
-            flex-direction: row-reverse; /* Logo on the right */
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid #333;
-        }
-
-        /* --- SIMPLIFIED LOGO --- */
+        /* --- CSS FOR THE LOGO --- */
         .text-logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            display: inline-block;
+            font-family: 'Arial Black', Impact, Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
             color: #ffffff;
-            background-color: #0056b3;
-            padding: 5px 15px;
-            border-radius: 0; /* Removed rounded corners */
+            background-color: var(--primary-color, #0056b3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            letter-spacing: 2px;
+            vertical-align: middle;
         }
 
-        .header__title { margin: 0; font-size: 1.5rem; }
-        .header__tagline { font-size: 0.8rem; color: #888; }
-
-        /* --- NAVIGATION --- */
-        .navigation {
-            background-color: #111;
-            padding: 10px;
-            text-align: center;
+        /* --- LAYOUT STYLES --- */
+        .work-section__content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
 
-        .navigation__link {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9rem;
-        }
-
-        /* --- FLAT CARDS --- */
-        .card {
-            background-color: #1a1a1a;
-            border: 1px solid #444;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .page-content {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-        }
-
-        /* --- JOB ARTICLES --- */
         .work-section__content article {
-            background-color: #222;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 5px solid #0056b3;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color, #0056b3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .job-details {
             list-style: none;
             padding: 0;
-            font-size: 0.9rem;
-            color: #ccc;
+            margin-bottom: 20px;
         }
-
-        /* --- FORM STYLING --- */
-        .application-form-section {
-            background-color: #1a1a1a;
-            padding: 25px;
-            border: 1px solid #444;
-            margin-top: 30px;
-        }
-
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-size: 0.85rem; color: #aaa; }
         
+        .job-details li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .job-details li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+        }
+
+        /* --- FORM STYLES --- */
+        .application-form-section {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            border-top: 5px solid #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
         .form-control {
             width: 100%;
             padding: 10px;
-            background-color: #222;
-            border: 1px solid #444;
-            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             max-width: 400px;
         }
 
-        /* --- BUTTONS --- */
         .button {
             display: inline-block;
             padding: 10px 20px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
             border: none;
             cursor: pointer;
-            font-size: 0.85rem;
         }
 
         .button--primary { background-color: #0056b3; color: white; }
-        .button--secondary { background-color: #444; color: white; }
+        .button--secondary { background-color: #6c757d; color: white; }
 
-        .footer {
+        #success-message {
+            display: none;
             text-align: center;
-            padding: 20px;
-            border-top: 1px solid #333;
-            font-size: 0.8rem;
+            padding: 40px;
+            border: 1px solid #28a745;
+            background-color: #f8f9fa;
         }
     </style>
 </head>
 <body>
-
     <header class="header">
-        <div class="header__column">
+        <div class="header__column header__column--left">
             <div class="text-logo">THB</div>
         </div>
-        <div class="header__column">
+        <div class="header__column header__column--right">
             <h1 class="header__title">The Hot Beans</h1>
             <p class="header__tagline">Work For Us - Join Our Team!</p>
         </div>
     </header>
 
     <nav class="navigation">
-        <a href="#" class="navigation__link">Home</a>
-        <a href="#" class="navigation__link">Company Profile</a>
-        <a href="#" class="navigation__link">Employees</a>
-        <a href="#" class="navigation__link">Vacancies</a>
-        <a href="#" class="navigation__link">Work For Us!</a>
+        <a href="index.html" class="navigation__link">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
+        <a href="employees.html" class="navigation__link">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link navigation__link--active">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
     </nav>
 
     <main class="page-content">
         <div class="content-wrapper">
             <aside class="sidebar-left">
-                <section class="card">
-                    <h2 style="color: #0056b3; font-size: 1.1rem;">Direct Contact</h2>
-                    <p style="font-size: 0.85rem;">Email: careers@hotbeans.com</p>
-                    <p style="font-size: 0.85rem;">Phone: (555) 123-4567</p>
+                <section class="quick-contact card">
+                    <h2 class="quick-contact__title">Direct Contact</h2>
+                    <p>Email: <a href="mailto:careers@hotbeansnewweb.com">careers@hotbeansnewweb.com</a></p>
+                    <p>Phone: (555) 123-4567</p>
                 </section>
             </aside>
 
             <div class="main-column">
-                <section class="card">
-                    <h2 style="color: #0056b3;">Open Positions</h2>
+                <section class="work-section card">
+                    <h2 class="welcome-section__title">Current Vacancies</h2>
+                    <p>Review our open positions and fill out the form below to apply.</p>
+
                     <div class="work-section__content">
                         <article>
-                            <h3 style="margin-top:0;">IT Project Manager</h3>
+                            <h3>IT Project Manager</h3>
                             <ul class="job-details">
-                                <li>• Lead agile development teams.</li>
-                                <li>• Manage project timelines and budgets.</li>
+                                <li>Lead agile development teams.</li>
+                                <li>Manage project timelines and budgets.</li>
                             </ul>
                             <a href="#apply-online" class="button button--secondary">Apply Now</a>
                         </article>
 
                         <article>
-                            <h3 style="margin-top:0;">Senior Web Developer</h3>
+                            <h3>Senior Web Developer</h3>
                             <ul class="job-details">
-                                <li>• 5+ years with React and Node.js.</li>
-                                <li>• Database management mastery.</li>
+                                <li>5+ years with React and Node.js.</li>
+                                <li>Database management mastery.</li>
                             </ul>
                             <a href="#apply-online" class="button button--secondary">Apply Now</a>
                         </article>
@@ -182,44 +162,58 @@
                 </section>
 
                 <section id="apply-online" class="application-form-section">
-                    <h3 style="color: #0056b3; margin-top:0;">Online Application Form</h3>
-                    <p style="color: #888; font-size: 0.8rem;">Please fill out all required fields.</p>
+                    <div id="form-container">
+                        <span style="font-weight:bold; font-size:1.2rem; display:block; margin-bottom:10px;">Online Application Form</span>
+                        <p style="color:red; font-size:0.9rem;">* Required fields</p>
 
-                    <form id="job-application-form">
-                        <div class="form-group">
-                            <label>* First Name:</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                        <form id="job-application-form">
+                            <div class="form-group">
+                                <label for="firstname">* First Name:</label>
+                                <input type="text" id="firstname" name="firstname" class="form-control" required>
+                            </div>
 
-                        <div class="form-group">
-                            <label>* Last Name:</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                            <div class="form-group">
+                                <label for="lastname">* Last Name:</label>
+                                <input type="text" id="lastname" name="lastname" class="form-control" required>
+                            </div>
 
-                        <div class="form-group">
-                            <label>* Are you a UK resident?</label>
-                            <input type="radio" name="resident" value="yes"> Yes
-                            <input type="radio" name="resident" value="no"> No
-                        </div>
+                            <div class="form-group">
+                                <label>* Are you a UK resident?</label>
+                                <input type="radio" id="res-yes" name="resident" value="yes" required> <label for="res-yes" style="display:inline; font-weight:normal;">Yes</label>
+                                <input type="radio" id="res-no" name="resident" value="no"> <label for="res-no" style="display:inline; font-weight:normal;">No</label>
+                            </div>
 
-                        <div class="form-group">
-                            <label>* Telephone Details:</label>
-                            <input type="tel" class="form-control" required>
-                        </div>
+                            <div class="form-group">
+                                <label for="phone">* Telephone Details:</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
 
-                        <button type="submit" class="button button--primary">Submit Application</button>
-                    </form>
+                            <button type="submit" class="button button--primary">Submit Application</button>
+                        </form>
+                    </div>
+
+                    <div id="success-message">
+                        <h3 style="color:#28a745;">Application Submitted Successfully!</h3>
+                        <p>Thank you for your interest in The Hot Beans. Our HR team will contact you soon.</p>
+                        <button onclick="location.reload()" class="button button--secondary">Back to form</button>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 The Hot Beans. All rights reserved.</p>
+        <p class="footer__text">&copy; 2026 The Hot Beans. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById('job-application-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('apply-online').scrollIntoView({behavior: 'smooth'});
+        });
+    </script>
 </body>
 </html>
-
-
 
