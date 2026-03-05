@@ -3,172 +3,195 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hot Beans - Company Profile (OLD)</title>
+    <title>The Hot Beans! - Company Profile (Draft)</title>
     <style>
         /* --- SOLID BLACK BACKGROUND --- */
         body {
+            margin: 0;
             background-color: #000000;
             color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, Helvetica, sans-serif; /* Generic font */
         }
 
-        /* --- SIMPLIFIED HEADER --- */
+        /* --- HEADER: LOGO MOVED TO RIGHT --- */
         .header {
-            padding: 20px;
             display: flex;
             flex-direction: row-reverse; /* Logo on the right */
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #0056b3;
+            padding: 20px;
+            border-bottom: 1px solid #333;
         }
 
+        /* --- SIMPLIFIED LOGO --- */
         .text-logo {
             font-size: 1.8rem;
-            color: #0056b3;
-            border: 1px solid #0056b3;
-            padding: 5px;
             font-weight: bold;
+            color: #ffffff;
+            background-color: #0056b3;
+            padding: 5px 15px;
+            border-radius: 0; /* Square corners */
         }
 
-        /* --- BASIC NAV --- */
+        .header__title { margin: 0; font-size: 1.5rem; }
+        .header__tagline { font-size: 0.8rem; color: #888; }
+
+        /* --- NAVIGATION --- */
         .navigation {
-            background-color: #222;
+            background-color: #111;
             padding: 10px;
             text-align: center;
         }
 
         .navigation__link {
-            color: #00ff00; /* Neon green links */
+            color: #fff;
+            text-decoration: none;
             margin: 0 10px;
-            text-decoration: underline;
+            font-size: 0.9rem;
         }
 
-        /* --- FLAT CARDS (NO SHADOWS) --- */
+        /* --- FLAT CARDS (NO SHADOWS/BLUR) --- */
         .card {
-            background-color: #111 !important;
+            background-color: #1a1a1a;
             border: 1px solid #444;
+            padding: 20px;
             margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 0; /* Square corners */
         }
 
-        /* --- UGLY TABLE --- */
+        .page-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        /* --- TABLE STYLING --- */
         .hours-table {
             width: 100%;
-            border: 2px solid white;
-            color: white;
-            margin-top: 10px;
+            border-collapse: collapse;
+            color: #fff;
         }
-
+        
         .hours-table th, .hours-table td {
-            border: 1px solid #555;
-            padding: 5px;
-            text-align: left;
-        }
-
-        .hours-table th { background-color: #333; }
-
-        /* --- BROKEN/POOR FORM --- */
-        .contact-form {
-            background-color: #222;
-            padding: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 10px;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            background-color: #000;
-            color: #00ff00; /* Neon green text in inputs */
-            border: 1px solid #0056b3;
-            padding: 8px;
-        }
-
-        /* This button looks like a button but is actually a broken link */
-        .fake-submit-btn {
-            background-color: #444;
-            color: white;
             padding: 10px;
-            text-decoration: none;
-            display: inline-block;
-            border: 2px outset #666;
-            cursor: not-allowed; /* Shows user it doesn't work */
+            text-align: left;
+            border-bottom: 1px solid #333;
         }
 
-        .main-column h2, .main-column h3 {
-            color: #ffff00; /* Yellow headers */
-            text-transform: uppercase;
+        .hours-table th { color: #0056b3; }
+        .closed-day { color: #ff4d4d; }
+
+        /* --- FORM STYLING --- */
+        .contact-form { display: grid; gap: 15px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-size: 0.8rem; margin-bottom: 5px; color: #aaa; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 10px;
+            background: #222;
+            border: 1px solid #444;
+            color: #fff;
         }
 
-        footer {
+        .submit-btn {
+            background-color: #0056b3;
+            color: white;
+            padding: 12px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer {
             text-align: center;
             padding: 20px;
-            font-size: 0.7rem;
             border-top: 1px solid #333;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
-
     <header class="header">
-        <div class="text-logo">THB-LOGO</div>
-        <div>
-            <h1>The Hot Beans</h1>
-            <p>WE DESIGN WEBSITES FOR YOU</p>
+        <div class="header__column">
+            <div class="text-logo">THB</div>
+        </div>
+        <div class="header__column">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
         </div>
     </header>
 
     <nav class="navigation">
         <a href="#" class="navigation__link">Home</a>
-        <a href="#" class="navigation__link">Profile</a>
-        <a href="#" class="navigation__link">Staff</a>
+        <a href="#" class="navigation__link">Company Profile</a>
+        <a href="#" class="navigation__link">Employees</a>
         <a href="#" class="navigation__link">Jobs</a>
+        <a href="#" class="navigation__link">Links</a>
     </nav>
 
-    <main style="padding: 20px;">
-        <div class="card">
-            <h2>Our Mission</h2>
-            <p>We want to make websites. We use HTML and CSS to make things for clients since 2015.</p>
-        </div>
+    <main class="page-content">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <section class="card">
+                    <h2 style="color: #0056b3; font-size: 1.2rem;">Direct Contact</h2>
+                    <p style="font-size: 0.9rem;">Email: info@hotbeansnewweb.com</p>
+                    <p style="font-size: 0.9rem;">Phone: (555) 123-4567</p>
+                    <p style="font-size: 0.9rem;">Address: Malt Street, London.</p>
+                </section>
+            </aside>
 
-        <div class="card">
-            <h2>Opening Hours</h2>
-            <table class="hours-table">
-                <tr><th>Mon-Fri</th><td>9:00 - 17:00</td></tr>
-                <tr><th>Sat-Sun</th><td>CLOSED</td></tr>
-            </table>
-        </div>
+            <div class="main-column">
+                <section class="card">
+                    <h2 style="color: #0056b3;">Mission & Vision</h2>
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 1rem; border-bottom: 1px solid #333;">Our Mission</h3>
+                        <p style="font-size: 0.9rem; color: #ccc;">To create exceptional web solutions that exceed client objectives and transform complex ideas into intuitive products.</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1rem; border-bottom: 1px solid #333;">Our Vision</h3>
+                        <p style="font-size: 0.9rem; color: #ccc;">To be globally recognized for technological innovation and impeccable code quality.</p>
+                    </div>
+                </section>
 
-        <div class="card">
-            <h2>Contact Us (Form Beta)</h2>
-            <p style="color: red;">* Warning: Form server may be offline.</p>
-            
-            <div class="contact-form">
-                <div class="form-group">
-                    <label>Name:</label>
-                    <input type="text" placeholder="Enter name...">
-                </div>
-                <div class="form-group">
-                    <label>Email:</label>
-                    <input type="email" placeholder="Enter email...">
-                </div>
-                <div class="form-group">
-                    <label>Message:</label>
-                    <textarea placeholder="Type here..."></textarea>
-                </div>
-                
-                <a href="javascript:alert('Error: 404 Form Service Not Found');" class="fake-submit-btn">SEND MESSAGE</a>
+                <section class="card">
+                    <h2 style="color: #0056b3;">Opening Hours</h2>
+                    <table class="hours-table">
+                        <tr><th>Mon - Fri</th><td>9:00 AM - 6:30 PM</td></tr>
+                        <tr><th>Sat - Sun</th><td class="closed-day">Closed</td></tr>
+                    </table>
+                </section>
+
+                <section class="card">
+                    <h2 style="color: #0056b3;">Contact Us</h2>
+                    <form action="#" class="contact-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Reason</label>
+                            <select>
+                                <option>General Inquiry</option>
+                                <option>Request a Quote</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="How can we help?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </section>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>Copyright 2024 - THE HOT BEANS COMPANY - ALL RIGHTS RESERVED</p>
+    <footer class="footer">
+        <p>&copy; 2024 The Hot Beans. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
