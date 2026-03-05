@@ -3,140 +3,171 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hot Beans - OLD VERSION</title>
+    <title>The Hot Beans - Draft </title>
     <style>
-        /* PURE BLACK BACKGROUND */
+        /* --- BLACK BACKGROUND --- */
         body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: "Times New Roman", Times, serif; /* Old web */
             margin: 0;
-            padding: 20px;
-            line-height: 1.2;
-        }
-
-        /* LOGO STYLE */
-        .text-logo {
-            font-size: 3rem;
-            color: #ff0000; /* Harsh red */
-            border: 4px double #ffffff;
-            padding: 10px;
-            display: inline-block;
-            font-weight: bold;
-            background-color: #333;
-        }
-
-        /* NAVIGATION */
-        nav {
-            margin: 20px 0;
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
-            padding: 10px 0;
-            background-color: #111;
-        }
-
-        nav a {
-            color: #00ff00; /* Neon green links */
-            margin-right: 20px;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        nav a:hover {
+            padding: 0;
+            background-color: #000000; /* Solid black */
             color: #ffffff;
-            background-color: #ff0000;
+            font-family: Arial, sans-serif; /* Standard */
         }
 
-        /* NO CARDS - JUST BOXES WITH BORDERS */
-        .box {
-            background-color: transparent !important;
-            border: 2px solid #ffffff;
-            margin-bottom: 25px;
+        /* --- HEADER WITHOUT EFFECTS --- */
+        .header {
             padding: 20px;
+            border-bottom: 1px solid #444;
+            display: flex;
+            flex-direction: row-reverse; /* Logo moved to the right */
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* COLORS THAT DON'T MATCH */
-        h1, h2, h3 {
-            color: #ffff00; /* Bright yellow */
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-
-        /* BUTTONS WITHOUT STYLING */
-        .button {
-            background-color: #cccccc;
-            color: #000000;
-            padding: 5px 10px;
-            border: 3px outset #ffffff;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
+        /* --- LOGO REPOSITIONED AND SIMPLIFIED --- */
+        .text-logo {
+            font-size: 2rem;
             font-weight: bold;
+            color: #0056b3; /* Plain blue text, no box */
+            border: 1px solid #0056b3;
+            padding: 5px;
         }
 
-        /* FLAT LAYOUT (NO FLEXBOX) */
-        .main-content {
-            width: 100%;
+        .header__title {
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
         }
 
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            border-top: 1px dotted white;
-            font-size: 0.8rem;
+        .header__tagline {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* --- NAVIGATION --- */
+        .navigation {
+            background-color: #1a1a1a;
+            padding: 10px;
             text-align: center;
+        }
+
+        .navigation__link {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        /* --- CARDS WITHOUT GLASS EFFECT --- */
+        .card {
+            background-color: #111111 !important; /* Flat dark background */
+            border: 1px solid #333; /* Simple border instead of blur */
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .page-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- BUTTONS --- */
+        .button {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #666;
+            margin-top: 10px;
+        }
+
+        .button--primary { background-color: #0056b3; }
+
+        /* --- LAYOUT --- */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="text-logo">THB</div>
-        <h1>THE HOT BEANS WEB DESIGN</h1>
-        <p>WELCOME TO OUR HOME PAGE. WE MAKE WEBSITES.</p>
+    <header class="header">
+        <div class="header__column">
+            <div class="text-logo">THB LOGO</div>
+        </div>
+        <div class="header__column">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
+        </div>
     </header>
 
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#">OUR PROFILE</a>
-        <a href="#">STAFF</a>
-        <a href="#">JOBS</a>
-        <a href="#">LINKS</a>
+    <nav class="navigation">
+        <a href="#" class="navigation__link">Home</a>
+        <a href="#" class="navigation__link">Company Profile</a>
+        <a href="#" class="navigation__link">Employees</a>
+        <a href="#" class="navigation__link">Vacancies</a>
+        <a href="#" class="navigation__link">Work For Us!</a>
+        <a href="#" class="navigation__link">Links</a>
     </nav>
 
-    <main class="main-content">
-        <div class="box">
-            <h2>Contact Us Fast</h2>
-            <p>Email: info@hotbeansnewweb.com</p>
-            <p>Phone: 555-098765</p>
-        </div>
+    <main class="page-content">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <section class="card">
+                    <h2>Quick Contact</h2>
+                    <p>Email: info@hotbeansnewweb.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </section>
+                
+                <section class="card">
+                    <h2>Join Our Team</h2>
+                    <p>Explore opportunities with us.</p>
+                    <a href="#" class="button">View Careers</a>
+                </section>
+            </aside>
 
-        <div class="box">
-            <h2>Welcome to The Hot Beans Website</h2>
-            <p>
-                This is our company website. We do many things like making websites and using computers. 
-                Please look at our list of things we do:
-            </p>
-            <ul>
-                <li><strong>Company Info</strong>: Read about us here.</li>
-                <li><strong>Our Workers</strong>: The people who work here.</li>
-                <li><strong>Job Openings</strong>: If you want a job, click here.</li>
-            </ul>
-            <br>
-            <a href="#" class="button">CLICK FOR A QUOTE</a>
-        </div>
+            <div class="main-column">
+                <article class="card">
+                    <h2>Welcome to The Hot Beans</h2>
+                    <p>
+                        Thank you for visiting the website of The Hot Beans. We are an agency specializing in web development and design. We transform ideas into online experiences.
+                    </p>
+                    <ul>
+                        <li><strong>Company Profile</strong>: Our mission.</li>
+                        <li><strong>Employees</strong>: Our team of experts.</li>
+                        <li><strong>Vacancies</strong>: Join our team.</li>
+                    </ul>
+                </article>
 
-        <div class="box">
-            <h2>Services</h2>
-            <h3>Cheap Web Help:</h3>
-            <p>We build pages with HTML very fast for your business.</p>
-            <h3>Basic Design:</h3>
-            <p>We use colors and pictures to make it look okay on screens.</p>
+                <section class="card">
+                    <h2>Our Services</h2>
+                    <h3>Custom Web Development:</h3>
+                    <p>Tailored websites built to meet your business needs.</p>
+                    <h3>Responsive Design:</h3>
+                    <p>Functional designs that look great on devices.</p>
+                </section>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <p>Copyright (c) 2024 - THE HOT BEANS - ALL RIGHTS RESERVED</p>
+    <footer class="footer">
+        <p>&copy; 2024 The Hot Beans. All rights reserved.</p>
     </footer>
 
 </body>
