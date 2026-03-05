@@ -3,117 +3,105 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hot Beans - Employees (Old Version)</title>
+    <title>The Hot Beans - Employees</title>
     <style>
-        /* --- BLACK BACKGROUND --- */
+        /* --- PLAIN BLACK BACKGROUND --- */
         body {
             margin: 0;
-            padding: 0;
-            background-color: #000000; /* Solid */
+            background-color: #000000;
             color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif; /* Generic font */
+            font-family: Arial, sans-serif; /* Generic font */
         }
 
-        /* --- HEADER REPOSITIONED --- */
+        /* --- HEADER: REVERSED COLUMN ORDER --- */
         .header {
-            padding: 20px;
-            border-bottom: 2px solid #444;
             display: flex;
             flex-direction: row-reverse; /* Logo on the right */
             justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #333;
         }
 
         /* --- SIMPLIFIED LOGO --- */
         .text-logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #0056b3; 
-            border: 2px solid #0056b3;
-            padding: 5px 10px;
+            color: #ffffff;
+            background-color: #0056b3;
+            padding: 5px 15px;
+            border-radius: 0px; /* Removed rounded corners */
         }
 
-        .header__title {
-            margin: 0;
-            font-size: 2rem;
-            color: #ffff00; /* Simple yellow for the title */
-        }
+        .header__title { margin: 0; font-size: 1.5rem; }
+        .header__tagline { font-size: 0.8rem; color: #888; }
 
         /* --- NAVIGATION --- */
         .navigation {
-            background-color: #222;
-            padding: 15px;
+            background-color: #111;
+            padding: 10px;
             text-align: center;
-            border-bottom: 1px solid #555;
         }
 
         .navigation__link {
-            color: #ffffff;
-            text-decoration: underline;
-            margin: 0 15px;
-            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
         }
 
-        /* --- EMPLOYEE GRID (FLAT DESIGN) --- */
+        /* --- FLAT EMPLOYEE GRID --- */
         .employee-grid {
-            display: block; /* Removed modern grid for a simpler stack */
-            padding: 20px;
-            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* --- REMOVED SHADOWS AND BLUR --- */
         .employee-card {
-            background-color: #111111; /* Flat dark grey */
-            border: 1px solid #ffffff; /* Sharp white border */
-            margin-bottom: 30px;
+            background-color: #1a1a1a; /* Flat dark grey */
+            border: 1px solid #444; /* Simple border */
             padding: 20px;
-            text-align: left; /* Alignment changed from center to left */
+            text-align: center;
         }
 
-        /* --- SIMPLIFIED AVATAR --- */
+        /* --- SQUARE AVATARS --- */
         .initials-avatar {
-            width: 80px;
-            height: 80px;
-            background-color: #444;
-            color: #ffffff;
+            width: 100px;
+            height: 100px;
+            background-color: #0056b3;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            font-weight: bold;
-            border: 1px solid #fff;
-            margin-bottom: 10px;
+            margin: 0 auto 15px auto;
+            border: 3px solid #333;
             border-radius: 0; /* Square instead of circle */
         }
 
-        .employee-card__name {
-            color: #00ff00; /* Neon green names */
-            margin: 5px 0;
-            font-size: 1.5rem;
-        }
+        .employee-card__name { color: #0056b3; margin: 10px 0; }
+        .employee-card__role { font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
+        .employee-card__description { font-size: 0.85rem; color: #bbb; line-height: 1.4; }
 
-        .employee-card__role {
-            font-weight: bold;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
-
-        /* --- BUTTONS --- */
+        /* --- PLAIN BUTTONS --- */
         .contact-btn {
             display: inline-block;
+            margin-top: 15px;
             padding: 10px 20px;
             background-color: #0056b3;
-            color: #ffffff;
+            color: white;
             text-decoration: none;
-            border: 1px solid #ffffff;
-            margin-top: 10px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         .footer {
             text-align: center;
-            padding: 30px;
-            border-top: 1px solid #444;
+            padding: 20px;
+            border-top: 1px solid #333;
             font-size: 0.8rem;
         }
     </style>
@@ -122,62 +110,62 @@
 
     <header class="header">
         <div class="header__column">
-            <div class="text-logo">THB LOGO</div>
+            <div class="text-logo">THB</div>
         </div>
         <div class="header__column">
             <h1 class="header__title">The Hot Beans</h1>
-            <p>Our Staff Members</p>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
         </div>
     </header>
 
     <nav class="navigation">
         <a href="#" class="navigation__link">Home</a>
-        <a href="#" class="navigation__link">Company Profile</a>
+        <a href="#" class="navigation__link">Profile</a>
         <a href="#" class="navigation__link">Employees</a>
-        <a href="#" class="navigation__link">Vacancies</a>
-        <a href="#" class="navigation__link">Work For Us!</a>
+        <a href="#" class="navigation__link">Jobs</a>
+        <a href="#" class="navigation__link">Contact</a>
     </nav>
 
     <main class="page-content">
-        <center><h2>MEET OUR TEAM</h2></center>
+        <h2 style="text-align: center; margin-top: 30px;">Our Staff</h2>
 
         <div class="employee-grid">
             <section class="employee-card">
                 <div class="initials-avatar">JS</div>
                 <h3 class="employee-card__name">James Smith</h3>
-                <p class="employee-card__role">Chief Executive Officer</p>
-                <p>James started this company in 2015. He manages the business every day.</p>
-                <a href="#" class="contact-btn">Email James</a>
+                <p class="employee-card__role">CEO</p>
+                <p class="employee-card__description">Founded The Hot Beans in 2015. Manages business strategy and daily operations.</p>
+                <a href="#" class="contact-btn">Contact James</a>
             </section>
 
             <section class="employee-card">
                 <div class="initials-avatar">RA</div>
                 <h3 class="employee-card__name">Rachel Allen</h3>
-                <p class="employee-card__role">Development Director</p>
-                <p>Rachel is in charge of all the web projects and making sure they work well.</p>
-                <a href="#" class="contact-btn">Email Rachel</a>
+                <p class="employee-card__role">Director</p>
+                <p class="employee-card__description">Oversees all web development projects and ensures quality standards.</p>
+                <a href="#" class="contact-btn">Contact Rachel</a>
             </section>
 
             <section class="employee-card">
                 <div class="initials-avatar">VA</div>
                 <h3 class="employee-card__name">Vik Akbar</h3>
-                <p class="employee-card__role">Senior Web Developer</p>
-                <p>Vik is a founding member and a very good programmer for databases.</p>
-                <a href="#" class="contact-btn">Email Vik</a>
+                <p class="employee-card__role">Senior Developer</p>
+                <p class="employee-card__description">Specializes in complex server-side logic and database architecture.</p>
+                <a href="#" class="contact-btn">Contact Vik</a>
             </section>
 
             <section class="employee-card">
                 <div class="initials-avatar">TK</div>
                 <h3 class="employee-card__name">Thomas Kane</h3>
-                <p class="employee-card__role">Junior Web Developer</p>
-                <p>Thomas is the newest person in the office. He helps with design and UI.</p>
-                <a href="#" class="contact-btn">Email Thomas</a>
+                <p class="employee-card__role">Junior Developer</p>
+                <p class="employee-card__description">Specializes in frontend frameworks and UI/UX design updates.</p>
+                <a href="#" class="contact-btn">Contact Thomas</a>
             </section>
         </div>
     </main>
 
     <footer class="footer">
-        <p>Copyright 2024 - The Hot Beans Team</p>
+        <p>The Hot Beans. All rights reserved.</p>
     </footer>
 
 </body>
