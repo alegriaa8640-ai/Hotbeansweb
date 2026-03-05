@@ -1,156 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hot Beans - Home</title>
-    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
-    <style>
-        /* --- BACKGROUND VIDEO STYLES --- */
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Places the video behind all content */
-            overflow: hidden;
-            background-color: #000; /* Fallback black background */
-        }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hot Beans - Home</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <style>
+        /* --- BACKGROUND VIDEO STYLES --- */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Places the video behind all content */
+            overflow: hidden;
+            background-color: #000; /* Fallback black background */
+        }
 
-        .video-background iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 100vh;
-            transform: translate(-50%, -50%);
-            pointer-events: none; /* Prevents user interaction with the video */
-        }
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* Prevents user interaction with the video */
+        }
 
-        /* Aspect ratio adjustments to ensure full coverage */
-        @media (min-aspect-ratio: 16/9) {
-            .video-background iframe { height: 56.25vw; }
-        }
-        @media (max-aspect-ratio: 16/9) {
-            .video-background iframe { width: 177.78vh; }
-        }
+        /* Aspect ratio adjustments to ensure full coverage */
+        @media (min-aspect-ratio: 16/9) {
+            .video-background iframe { height: 56.25vw; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-background iframe { width: 177.78vh; }
+        }
 
-        /* --- VISIBILITY IMPROVEMENTS FOR OVERLAY CONTENT --- */
-        body {
-            margin: 0;
-            color: #ffffff;
-            /* Text shadow added for better readability over moving images */
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
-        }
+        /* --- VISIBILITY IMPROVEMENTS FOR OVERLAY CONTENT --- */
+        body {
+            margin: 0;
+            color: #ffffff;
+            /* Text shadow added for better readability over moving images */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+        }
 
-        .card {
-            /* Semi-transparent background for content cards */
-            background-color: rgba(0, 0, 0, 0.6) !important; 
-            backdrop-filter: blur(5px); /* Modern glass-morphism effect */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        .card {
+            /* Semi-transparent background for content cards */
+            background-color: rgba(0, 0, 0, 0.6) !important; 
+            backdrop-filter: blur(5px); /* Modern glass-morphism effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-        /* --- EXISTING LOGO CSS --- */
-        .text-logo {
-            display: inline-block;
-            font-family: 'Arial Black', Impact, Arial, sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #ffffff;
-            background-color: var(--primary-color, #0056b3);
-            padding: 10px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            letter-spacing: 2px;
-            vertical-align: middle;
-        }
-    </style>
+        /* --- EXISTING LOGO CSS --- */
+        .text-logo {
+            display: inline-block;
+            font-family: 'Arial Black', Impact, Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background-color: var(--primary-color, #0056b3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            letter-spacing: 2px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-    <div class="video-background">
-        <iframe 
-            src="https://www.youtube.com/embed/iWCenGIIBVE?autoplay=1&mute=1&controls=0&loop=1&playlist=iWCenGIIBVE&showinfo=0&rel=0&modestbranding=1" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/iWCenGIIBVE?autoplay=1&mute=1&controls=0&loop=1&playlist=iWCenGIIBVE&showinfo=0&rel=0&modestbranding=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
-    <header class="header">
-        <div class="header__column header__column--left">
-            <div class="text-logo">THB</div>
-        </div>
-        <div class="header__column header__column--right">
-            <h1 class="header__title">The Hot Beans</h1>
-            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
-            <p class="header__text">Hot Beans Web Solutions. </p>
-        </div>
-    </header>
+    <header class="header">
+        <div class="header__column header__column--left">
+            <div class="text-logo">THB</div>
+        </div>
+        <div class="header__column header__column--right">
+            <h1 class="header__title">The Hot Beans</h1>
+            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
+            <p class="header__text">Hot Beans Web Solutions. </p>
+        </div>
+    </header>
 
-    <nav class="navigation">
-        <a href="index.html" class="navigation__link navigation__link--active">Home</a>
-        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
-        <a href="employees.html" class="navigation__link">Employees</a>
-        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
-        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
-        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
-    </nav>
+    <nav class="navigation">
+        <a href="index.html" class="navigation__link navigation__link--active">Home</a>
+        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
+        <a href="employees.html" class="navigation__link">Employees</a>
+        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
+        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
+        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
+    </nav>
 
-    <main class="page-content">
-        <div class="content-wrapper">
-            <aside class="sidebar-left">
-                <section class="quick-contact card">
-                    <h2 class="quick-contact__title">Quick Contact</h2>
-                    <p class="quick-contact__info">Email: <a href="mailto:info@hotbeansnewweb.com">info@hotbeansnewweb.com</a></p>
-                    <p class="quick-contact__info">Phone: <a href="tel:+44553934567">(555) 123-4567</a></p>
-                </section>
-                <section class="action-card card">
-                    <h2 class="action-card__title">Ready to build something amazing?</h2>
-                    <p>Let's discuss your next project!</p>
-                    <a href="CompanyProfile.html#contact" class="button button--primary">Get a Quote</a>
-                </section>
-                <section class="action-card card">
-                    <h2 class="action-card__title">Join Our Innovative Team!</h2>
-                    <p>Explore exciting career opportunities with The Hot Beans.</p>
-                    <a href="WorkForUs.html" class="button button--secondary">View Careers</a>
-                </section>
-            </aside>
+    <main class="page-content">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <section class="quick-contact card">
+                    <h2 class="quick-contact__title">Quick Contact</h2>
+                    <p class="quick-contact__info">Email: <a href="mailto:info@hotbeansnewweb.com">info@hotbeansnewweb.com</a></p>
+                    <p class="quick-contact__info">Phone: <a href="tel:+44553934567">(555) 123-4567</a></p>
+                </section>
+                <section class="action-card card">
+                    <h2 class="action-card__title">Ready to build something amazing?</h2>
+                    <p>Let's discuss your next project!</p>
+                    <a href="CompanyProfile.html#contact" class="button button--primary">Get a Quote</a>
+                </section>
+                <section class="action-card card">
+                    <h2 class="action-card__title">Join Our Innovative Team!</h2>
+                    <p>Explore exciting career opportunities with The Hot Beans.</p>
+                    <a href="WorkForUs.html" class="button button--secondary">View Careers</a>
+                </section>
+            </aside>
 
-            <div class="main-column">
-                <article class="welcome-section card">
-                    <h2 class="welcome-section__title">Welcome to The Hot Beans Website Development Company</h2>
-                    <p class="welcome-section__text">
-                        Thank you for visiting the official website of The New Hot Beans. We are a forward-thinking agency specializing in bespoke web development, innovative design, and robust digital solutions for global enterprises. Our passion is to transform ideas into powerful online experiences.
-                    </p>
-                    <ul class="welcome-section__list">
-                        <li><strong>Company Profile</strong>: Discover our mission, vision, and core values that drive our success.</li>
-                        <li><strong>Employees</strong>: Meet the dedicated team of experts who bring your digital dreams to life.</li>
-                        <li><strong>Current Vacancies</strong>: Explore exciting opportunities to join our growing, innovative team.</li>
-                        <li><strong>Work For Us!</strong>: Learn more about our company culture, benefits, and how we invest in our talent.</li>
-                        <li><strong>Useful Links</strong>: Access external resources and tools for web professionals and clients.</li>
-                    </ul>
-                </article>
+            <div class="main-column">
+                <article class="welcome-section card">
+                    <h2 class="welcome-section__title">Welcome to The Hot Beans Website Development Company</h2>
+                    <p class="welcome-section__text">
+                        Thank you for visiting the official website of The New Hot Beans. We are a forward-thinking agency specializing in bespoke web development, innovative design, and robust digital solutions for global enterprises. Our passion is to transform ideas into powerful online experiences.
+                    </p>
+                    <ul class="welcome-section__list">
+                        <li><strong>Company Profile</strong>: Discover our mission, vision, and core values that drive our success.</li>
+                        <li><strong>Employees</strong>: Meet the dedicated team of experts who bring your digital dreams to life.</li>
+                        <li><strong>Current Vacancies</strong>: Explore exciting opportunities to join our growing, innovative team.</li>
+                        <li><strong>Work For Us!</strong>: Learn more about our company culture, benefits, and how we invest in our talent.</li>
+                        <li><strong>Useful Links</strong>: Access external resources and tools for web professionals and clients.</li>
+                    </ul>
+                </article>
 
-                <section class="services-section card">
-                    <h2 class="services-section__title">Our Core Services</h2>
-                    <div class="services-grid">
-                        <div class="service-item">
-                            <h3 class="service-item__title">Custom Web Development:</h3>
-                            <p class="service-item__description">Tailored websites built with the latest technologies to meet your unique business needs.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3 class="service-item__title">Responsive Design:</h3>
-                            <p class="service-item__description">Beautiful and functional designs that look great on any device.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
+                <section class="services-section card">
+                    <h2 class="services-section__title">Our Core Services</h2>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <h3 class="service-item__title">Custom Web Development:</h3>
+                            <p class="service-item__description">Tailored websites built with the latest technologies to meet your unique business needs.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3 class="service-item__title">Responsive Design:</h3>
+                            <p class="service-item__description">Beautiful and functional designs that look great on any device.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
-    <footer class="footer">
-        <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
-    </footer>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 The Hot Beans. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
