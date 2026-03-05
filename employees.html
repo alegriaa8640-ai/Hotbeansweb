@@ -3,193 +3,182 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hot Beans - Meet Our Team</title>
-    <link rel="stylesheet" type="text/css" href="Styles/Unit6_Style_Improved.css" />
+    <title>The Hot Beans - Employees (Old Version)</title>
     <style>
-        /* --- CSS FOR THE NEW TEXT LOGO "THB" --- */
-        .text-logo {
-            display: inline-block;
-            font-family: 'Arial Black', Impact, Arial, sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
+        /* --- BLACK BACKGROUND --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Solid */
             color: #ffffff;
-            background-color: var(--primary-color, #0056b3);
-            padding: 10px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            letter-spacing: 2px;
-            vertical-align: middle;
+            font-family: Arial, Helvetica, sans-serif; /* Generic font */
         }
 
-        /* Specific styles for the employee section */
+        /* --- HEADER REPOSITIONED --- */
+        .header {
+            padding: 20px;
+            border-bottom: 2px solid #444;
+            display: flex;
+            flex-direction: row-reverse; /* Logo on the right */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* --- SIMPLIFIED LOGO --- */
+        .text-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0056b3; 
+            border: 2px solid #0056b3;
+            padding: 5px 10px;
+        }
+
+        .header__title {
+            margin: 0;
+            font-size: 2rem;
+            color: #ffff00; /* Simple yellow for the title */
+        }
+
+        /* --- NAVIGATION --- */
+        .navigation {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+
+        .navigation__link {
+            color: #ffffff;
+            text-decoration: underline;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* --- EMPLOYEE GRID (FLAT DESIGN) --- */
         .employee-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-            max-width: 1300px;
+            display: block; /* Removed modern grid for a simpler stack */
+            padding: 20px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .employee-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 25px;
-            border-radius: 12px;
-            background-color: var(--bg-light);
-            box-shadow: 0 6px 15px var(--shadow-light);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
+            background-color: #111111; /* Flat dark grey */
+            border: 1px solid #ffffff; /* Sharp white border */
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: left; /* Alignment changed from center to left */
         }
 
-            .employee-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 25px var(--shadow-medium);
-            }
-
-        /* --- NEW STYLE FOR INITIALS AVATAR (Replaces Image) --- */
+        /* --- SIMPLIFIED AVATAR --- */
         .initials-avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Makes it a circle */
-            background-color: var(--primary-color, #0056b3); /* Blue background */
-            color: #ffffff; /* White text */
-            
-            /* Center the text */
+            width: 80px;
+            height: 80px;
+            background-color: #444;
+            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            
-            /* Text styling */
-            font-family: 'Arial Black', Impact, Arial, sans-serif;
-            font-size: 3.5rem; /* Large text */
+            font-size: 2rem;
             font-weight: bold;
-            letter-spacing: -2px;
-            
-            margin-bottom: 15px;
-            border: 5px solid #e6e6e6; /* Light grey border */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #fff;
+            margin-bottom: 10px;
+            border-radius: 0; /* Square instead of circle */
         }
 
         .employee-card__name {
-            margin: 0 0 5px 0;
-            color: var(--primary-color, #0056b3);
-            font-size: 1.6em;
+            color: #00ff00; /* Neon green names */
+            margin: 5px 0;
+            font-size: 1.5rem;
         }
 
         .employee-card__role {
-            font-style: normal;
-            font-weight: 600;
-            color: var(--text-medium, #555);
+            font-weight: bold;
+            color: #ccc;
             margin-bottom: 10px;
-            font-size: 1.1em;
         }
 
-        .employee-card__description {
-            font-size: 1em;
-            color: var(--text-medium, #555);
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        /* --- BUTTON STYLE --- */
+        /* --- BUTTONS --- */
         .contact-btn {
             display: inline-block;
-            padding: 10px 25px;
-            background-color: var(--primary-color, #0056b3);
+            padding: 10px 20px;
+            background-color: #0056b3;
             color: #ffffff;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 25px;
-            transition: background-color 0.3s, transform 0.2s;
-            border: 2px solid transparent;
+            border: 1px solid #ffffff;
+            margin-top: 10px;
+            font-size: 0.9rem;
         }
 
-        .contact-btn:hover {
-            background-color: #ffffff;
-            color: var(--primary-color, #0056b3);
-            border-color: var(--primary-color, #0056b3);
-            cursor: pointer;
-        }
-
-        .contact-btn:active {
-            transform: scale(0.95);
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #444;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
+
     <header class="header">
-        <div class="header__column header__column--left">
-            <div class="text-logo">THB</div>
+        <div class="header__column">
+            <div class="text-logo">THB LOGO</div>
         </div>
-        <div class="header__column header__column--right">
+        <div class="header__column">
             <h1 class="header__title">The Hot Beans</h1>
-            <p class="header__tagline">Crafting Digital Experiences, One Byte at a Time!</p>
-            <p class="header__text">Hot Beans Web Solutions.</p>
+            <p>Our Staff Members</p>
         </div>
     </header>
 
     <nav class="navigation">
-        <a href="index.html" class="navigation__link">Home</a>
-        <a href="CompanyProfile.html" class="navigation__link">Company Profile</a>
-        <a href="Employees.html" class="navigation__link navigation__link--active">Employees</a>
-        <a href="CurrentVacancies.html" class="navigation__link">Current Vacancies</a>
-        <a href="WorkForUs.html" class="navigation__link">Work For Us!</a>
-        <a href="UsefulLinks.html" class="navigation__link">Useful Links</a>
+        <a href="#" class="navigation__link">Home</a>
+        <a href="#" class="navigation__link">Company Profile</a>
+        <a href="#" class="navigation__link">Employees</a>
+        <a href="#" class="navigation__link">Vacancies</a>
+        <a href="#" class="navigation__link">Work For Us!</a>
     </nav>
 
     <main class="page-content">
-        <h2 class="welcome-section__title">Meet Our Team of Web Specialists</h2>
+        <center><h2>MEET OUR TEAM</h2></center>
 
         <div class="employee-grid">
-
-            <section class="employee-card card" aria-labelledby="james-name">
-                <div class="initials-avatar">J.S</div>
-                <h3 id="james-name" class="employee-card__name">James Smith</h3>
+            <section class="employee-card">
+                <div class="initials-avatar">JS</div>
+                <h3 class="employee-card__name">James Smith</h3>
                 <p class="employee-card__role">Chief Executive Officer</p>
-                <p class="employee-card__description">James founded The Hot Beans Web in 2015 and now acts as CEO, leading the overall business strategy and managing daily operations.</p>
-                <a href="CompanyProfile.html#contact" class="contact-btn">Contact James</a>
+                <p>James started this company in 2015. He manages the business every day.</p>
+                <a href="#" class="contact-btn">Email James</a>
             </section>
 
-            <section class="employee-card card" aria-labelledby="rachel-name">
-                <div class="initials-avatar">R.A</div>
-                <h3 id="rachel-name" class="employee-card__name">Rachel Allen</h3>
+            <section class="employee-card">
+                <div class="initials-avatar">RA</div>
+                <h3 class="employee-card__name">Rachel Allen</h3>
                 <p class="employee-card__role">Development Director</p>
-                <p class="employee-card__description">Rachel oversees all web development projects, ensuring timely delivery and strict compliance with high-quality and performance standards.</p>
-                <a href="CompanyProfile.html#contact" class="contact-btn">Contact Rachel</a>
+                <p>Rachel is in charge of all the web projects and making sure they work well.</p>
+                <a href="#" class="contact-btn">Email Rachel</a>
             </section>
 
-            <section class="employee-card card" aria-labelledby="vik-name">
-                <div class="initials-avatar">V.A</div>
-                <h3 id="vik-name" class="employee-card__name">Vik Akbar</h3>
+            <section class="employee-card">
+                <div class="initials-avatar">VA</div>
+                <h3 class="employee-card__name">Vik Akbar</h3>
                 <p class="employee-card__role">Senior Web Developer</p>
-                <p class="employee-card__description">As a founding member, Vik is a core full-stack developer, specializing in complex server-side logic and database architecture.</p>
-                <a href="CompanyProfile.html#contact" class="contact-btn">Contact Vik</a>
+                <p>Vik is a founding member and a very good programmer for databases.</p>
+                <a href="#" class="contact-btn">Email Vik</a>
             </section>
 
-            <section class="employee-card card" aria-labelledby="thomas-name">
-                <div class="initials-avatar">T.K</div>
-                <h3 id="thomas-name" class="employee-card__name">Thomas Kane</h3>
+            <section class="employee-card">
+                <div class="initials-avatar">TK</div>
+                <h3 class="employee-card__name">Thomas Kane</h3>
                 <p class="employee-card__role">Junior Web Developer</p>
-                <p class="employee-card__description">Thomas is our newest team member, specializing in modern frontend frameworks, bringing fresh ideas and enthusiasm to our UI/UX designs.</p>
-                <a href="CompanyProfile.html#contact" class="contact-btn">Contact Thomas</a>
+                <p>Thomas is the newest person in the office. He helps with design and UI.</p>
+                <a href="#" class="contact-btn">Email Thomas</a>
             </section>
         </div>
     </main>
 
     <footer class="footer">
-        <div class="social-links">
-            <a href="#" aria-label="Find us on Facebook" class="social-links__item"><img width="40" height="40" src="images/fblogo.png" alt="Facebook logo"></a>
-            <a href="#" aria-label="Follow us on Twitter" class="social-links__item"><img width="40" height="40" src="images/twitlogo.png" alt="Twitter logo"></a>
-            <a href="#" aria-label="Follow us on Instagram" class="social-links__item"><img width="40" height="40" src="images/instalogo.png" alt="Instagram logo"></a>
-            <a href="#" aria-label="Connect with us on LinkedIn" class="social-links__item"><img width="40" height="40" src="images/linklogo.png" alt="LinkedIn logo"></a>
-        </div>
-        <p class="footer__text">The Hot Beans. All rights reserved.</p>
+        <p>Copyright 2024 - The Hot Beans Team</p>
     </footer>
+
 </body>
 </html>
-
-
